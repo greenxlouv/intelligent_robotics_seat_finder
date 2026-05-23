@@ -163,12 +163,13 @@
           <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
       </link>
     </model>
-    <model name="person_1"><static>true</static><pose>4.75 4 1.0 0 0 0</pose>
-      <link name="link">
-        <collision name="c"><geometry><cylinder><radius>0.22</radius><length>0.8</length></cylinder></geometry></collision>
-        <visual name="v"><geometry><cylinder><radius>0.22</radius><length>0.8</length></cylinder></geometry>
-          <material><ambient>0.20 0.40 0.75 1</ambient><diffuse>0.20 0.40 0.75 1</diffuse></material></visual>
-      </link>
+    <model name="person_1">
+      <include>
+        <uri>/home/jenbuntu/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/person_standing</uri>
+        <name>person_1</name>
+        <static>true</static>
+        <pose>4.75 4 0 0 0 0</pose>
+      </include>
     </model>
     <!-- 의자 1-4 (서쪽, 빈) -->
     <model name="chair_1_4_seat"><static>true</static><pose>3.25 4 0.44 0 0 0</pose>
@@ -230,13 +231,12 @@
           <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
       </link>
     </model>
-    <model name="person_2"><static>true</static><pose>-4 4.75 1.0 0 0 0</pose>
-      <link name="link">
-        <collision name="c"><geometry><cylinder><radius>0.22</radius><length>0.8</length></cylinder></geometry></collision>
-        <visual name="v"><geometry><cylinder><radius>0.22</radius><length>0.8</length></cylinder></geometry>
-          <material><ambient>0.75 0.25 0.20 1</ambient><diffuse>0.75 0.25 0.20 1</diffuse></material></visual>
-      </link>
-    </model>
+    <include>
+      <uri>/home/jenbuntu/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/person_standing</uri>
+      <name>person_2</name>
+      <static>true</static>
+      <pose>-4 4.75 0 0 0 0</pose>
+    </include>
     <!-- 의자 2-2 (남, 빈) -->
     <model name="chair_2_2_seat"><static>true</static><pose>-4 3.25 0.44 0 0 0</pose>
       <link name="link">
@@ -281,13 +281,12 @@
           <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
       </link>
     </model>
-    <model name="person_3"><static>true</static><pose>-3.25 4 1.1 0 0 0</pose>
-      <link name="link">
-        <collision name="c"><geometry><cylinder><radius>0.22</radius><length>0.8</length></cylinder></geometry></collision>
-        <visual name="v"><geometry><cylinder><radius>0.22</radius><length>0.8</length></cylinder></geometry>
-          <material><ambient>0.20 0.60 0.30 1</ambient><diffuse>0.20 0.60 0.30 1</diffuse></material></visual>
-      </link>
-    </model>
+    <include>
+      <uri>/home/jenbuntu/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/person_standing</uri>
+      <name>person_3</name>
+      <static>true</static>
+      <pose>-3.25 4 0 0 0 0</pose>
+    </include>
     <!-- 의자 2-4 (서, 빈) -->
     <model name="chair_2_4_seat"><static>true</static><pose>-4.75 4 0.44 0 0 0</pose>
       <link name="link">
@@ -370,13 +369,12 @@
           <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
       </link>
     </model>
-    <model name="person_4"><static>true</static><pose>4 -4.75 1.1 0 0 0</pose>
-      <link name="link">
-        <collision name="c"><geometry><cylinder><radius>0.22</radius><length>0.8</length></cylinder></geometry></collision>
-        <visual name="v"><geometry><cylinder><radius>0.22</radius><length>0.8</length></cylinder></geometry>
-          <material><ambient>0.70 0.20 0.60 1</ambient><diffuse>0.70 0.20 0.60 1</diffuse></material></visual>
-      </link>
-    </model>
+    <include>
+      <uri>/home/jenbuntu/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/person_standing</uri>
+      <name>person_4</name>
+      <static>true</static>
+      <pose>4 -4.75 0 0 0 0</pose>
+    </include>
     <!-- 의자 3-3 (동, 빈) -->
     <model name="chair_3_3_seat"><static>true</static><pose>4.75 -4 0.44 0 0 0</pose>
       <link name="link">
@@ -606,13 +604,12 @@
           <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
       </link>
     </model>
-    <model name="person_5"><static>true</static><pose>0.75 0 1.0 0 0 0</pose>
-      <link name="link">
-        <collision name="c"><geometry><cylinder><radius>0.22</radius><length>0.8</length></cylinder></geometry></collision>
-        <visual name="v"><geometry><cylinder><radius>0.22</radius><length>0.8</length></cylinder></geometry>
-          <material><ambient>0.85 0.55 0.10 1</ambient><diffuse>0.85 0.55 0.10 1</diffuse></material></visual>
-      </link>
-    </model>
+    <include>
+      <uri>/home/jenbuntu/.ignition/fuel/fuel.gazebosim.org/openrobotics/models/person_standing</uri>
+      <name>person_5</name>
+      <static>true</static>
+      <pose>0.75 0 0 0 0 0</pose>
+    </include>
     <!-- 의자 5-4 (서, 빈) -->
     <model name="chair_5_4_seat"><static>true</static><pose>-0.75 0 0.44 0 0 0</pose>
       <link name="link">
