@@ -22,7 +22,7 @@
     <light type="directional" name="sun">
       <cast_shadows>true</cast_shadows>
       <pose>0 0 10 0 0 0</pose>
-      <diffuse>0.95 0.92 0.85 1</diffuse>
+      <diffuse>1.0 1.0 1.0 1</diffuse>
       <specular>0.3 0.3 0.3 1</specular>
       <attenuation>
         <range>1000</range>
@@ -94,7 +94,7 @@
       <link name="link">
         <collision name="c"><geometry><cylinder><radius>0.06</radius><length>0.72</length></cylinder></geometry></collision>
         <visual name="v"><geometry><cylinder><radius>0.06</radius><length>0.72</length></cylinder></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <!-- 의자 1-1 (북쪽, 빈) -->
@@ -102,21 +102,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_1_1_legs"><static>true</static><pose>4 4.75 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_1_1_back"><static>true</static><pose>4 5.0 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.04 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.04 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <!-- 의자 1-2 (남쪽, 빈) -->
@@ -124,21 +124,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_1_2_legs"><static>true</static><pose>4 3.25 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_1_2_back"><static>true</static><pose>4 3.0 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.04 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.04 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <!-- 의자 1-3 (동쪽, 사람 있음) -->
@@ -146,21 +146,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_1_3_legs"><static>true</static><pose>4.75 4 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_1_3_back"><static>true</static><pose>5.0 4 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.04 0.38 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.04 0.38 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="person_1">
@@ -176,21 +176,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_1_4_legs"><static>true</static><pose>3.25 4 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_1_4_back"><static>true</static><pose>3.0 4 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.04 0.38 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.04 0.38 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
 
@@ -206,7 +206,7 @@
       <link name="link">
         <collision name="c"><geometry><cylinder><radius>0.06</radius><length>0.72</length></cylinder></geometry></collision>
         <visual name="v"><geometry><cylinder><radius>0.06</radius><length>0.72</length></cylinder></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <!-- 의자 2-1 (북, 사람) -->
@@ -214,21 +214,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_2_1_legs"><static>true</static><pose>-4 4.75 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_2_1_back"><static>true</static><pose>-4 5.0 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.04 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.04 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <include>
@@ -242,21 +242,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_2_2_legs"><static>true</static><pose>-4 3.25 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_2_2_back"><static>true</static><pose>-4 3.0 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.04 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.04 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <!-- 의자 2-3 (동, 사람) -->
@@ -264,21 +264,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_2_3_legs"><static>true</static><pose>-3.25 4 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_2_3_back"><static>true</static><pose>-3.0 4 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.04 0.38 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.04 0.38 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <include>
@@ -292,21 +292,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_2_4_legs"><static>true</static><pose>-4.75 4 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_2_4_back"><static>true</static><pose>-5.0 4 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.04 0.38 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.04 0.38 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
 
@@ -322,7 +322,7 @@
       <link name="link">
         <collision name="c"><geometry><cylinder><radius>0.06</radius><length>0.72</length></cylinder></geometry></collision>
         <visual name="v"><geometry><cylinder><radius>0.06</radius><length>0.72</length></cylinder></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <!-- 의자 3-1 (북, 빈) -->
@@ -330,21 +330,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_3_1_legs"><static>true</static><pose>4 -3.25 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_3_1_back"><static>true</static><pose>4 -3.0 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.04 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.04 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <!-- 의자 3-2 (남, 사람) -->
@@ -352,21 +352,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_3_2_legs"><static>true</static><pose>4 -4.75 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_3_2_back"><static>true</static><pose>4 -5.0 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.04 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.04 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <include>
@@ -380,21 +380,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_3_3_legs"><static>true</static><pose>4.75 -4 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_3_3_back"><static>true</static><pose>5.0 -4 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.04 0.38 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.04 0.38 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <!-- 의자 3-4 (서, 빈) -->
@@ -402,21 +402,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_3_4_legs"><static>true</static><pose>3.25 -4 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_3_4_back"><static>true</static><pose>3.0 -4 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.04 0.38 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.04 0.38 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
 
@@ -432,7 +432,7 @@
       <link name="link">
         <collision name="c"><geometry><cylinder><radius>0.06</radius><length>0.72</length></cylinder></geometry></collision>
         <visual name="v"><geometry><cylinder><radius>0.06</radius><length>0.72</length></cylinder></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <!-- 의자 4-1 (북, 빈) -->
@@ -440,21 +440,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_4_1_legs"><static>true</static><pose>-4 -3.25 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_4_1_back"><static>true</static><pose>-4 -3.0 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.04 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.04 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <!-- 의자 4-2 (남, 빈) -->
@@ -462,21 +462,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_4_2_legs"><static>true</static><pose>-4 -4.75 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_4_2_back"><static>true</static><pose>-4 -5.0 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.04 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.04 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <!-- 의자 4-3 (동, 빈) -->
@@ -484,21 +484,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_4_3_legs"><static>true</static><pose>-3.25 -4 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_4_3_back"><static>true</static><pose>-3.0 -4 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.04 0.38 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.04 0.38 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <!-- 의자 4-4 (서, 빈) -->
@@ -506,21 +506,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_4_4_legs"><static>true</static><pose>-4.75 -4 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_4_4_back"><static>true</static><pose>-5.0 -4 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.04 0.38 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.04 0.38 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <!-- ===== 테이블 5 (중앙: 0, 0) - 사람 1명 ===== -->
@@ -535,7 +535,7 @@
       <link name="link">
         <collision name="c"><geometry><cylinder><radius>0.06</radius><length>0.72</length></cylinder></geometry></collision>
         <visual name="v"><geometry><cylinder><radius>0.06</radius><length>0.72</length></cylinder></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <!-- 의자 5-1 (북, 빈) -->
@@ -543,21 +543,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_5_1_legs"><static>true</static><pose>0 0.75 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_5_1_back"><static>true</static><pose>0 1.0 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.04 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.04 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <!-- 의자 5-2 (남, 빈) -->
@@ -565,21 +565,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_5_2_legs"><static>true</static><pose>0 -0.75 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_5_2_back"><static>true</static><pose>0 -1.0 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.04 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.04 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <!-- 의자 5-3 (동, 사람) -->
@@ -587,21 +587,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_5_3_legs"><static>true</static><pose>0.75 0 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_5_3_back"><static>true</static><pose>1.0 0 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.04 0.38 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.04 0.38 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <include>
@@ -615,21 +615,21 @@
       <link name="link">
         <collision name="c"><geometry><box><size>0.38 0.38 0.04</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.38 0.38 0.04</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient><diffuse>0.85 0.70 0.40 1</diffuse></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_5_4_legs"><static>true</static><pose>-0.75 0 0.22 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.32 0.32 0.44</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.32 0.32 0.44</size></box></geometry>
-          <material><ambient>0.50 0.32 0.12 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
     <model name="chair_5_4_back"><static>true</static><pose>-1.0 0 0.65 0 0 0</pose>
       <link name="link">
         <collision name="c"><geometry><box><size>0.04 0.38 0.38</size></box></geometry></collision>
         <visual name="v"><geometry><box><size>0.04 0.38 0.38</size></box></geometry>
-          <material><ambient>0.85 0.70 0.40 1</ambient></material></visual>
+          <material><ambient>0.20 0.60 0.90 1</ambient><diffuse>0.20 0.60 0.90 1</diffuse></material></visual>
       </link>
     </model>
   </world>
