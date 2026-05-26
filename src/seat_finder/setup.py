@@ -29,7 +29,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'chair_detector = seat_finder.chair_detector:main',
+            'chair_detector = seat_finder.chair_detector_node:main',
         ],
     },
 )
