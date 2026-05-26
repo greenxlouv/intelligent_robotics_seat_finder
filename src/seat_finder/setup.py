@@ -31,6 +31,7 @@ setup(
         'console_scripts': [
             'chair_detector = seat_finder.chair_detector_node:main',
             'coord_transform = seat_finder.coord_transform_node:main',
+            'seat_navigator = seat_finder.seat_navigator_node:main',
         ],
     },
 )
