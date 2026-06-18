@@ -18,10 +18,9 @@ class SeatNavigatorNode(Node):
         self.is_rotating = False
         self.create_timer(0.1, self.rotate_timer)
         self.get_logger().info('SeatNavigatorNode started')
-
+    # 빈 의자 못 찾으면 회전하면서 탐색
     def rotate_timer(self):
         if not self.is_navigating and not self.is_rotating:
-            # 빈 의자 못 찾으면 회전하면서 탐색
             twist = Twist()
             twist.angular.z = 0.3
             self.cmd_vel_pub.publish(twist)

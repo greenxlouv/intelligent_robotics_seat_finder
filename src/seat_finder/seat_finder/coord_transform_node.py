@@ -53,6 +53,7 @@ class CoordTransformNode(Node):
             if self.latest_depth is not None:
                 h, w = self.latest_depth.shape[:2]
                 if 0 <= px < w and 0 <= py < h:
+                    # depth 값 측정
                     depth = float(self.latest_depth[py, px])
                     if not np.isfinite(depth) or depth <= 0.1 or depth > 10.0:
                         depth = 2.0
@@ -60,11 +61,11 @@ class CoordTransformNode(Node):
                     depth = 2.0
             else:
                 depth = 2.0
-
+            # 픽셀 → 카메라 3D 좌표
             x_cam = (px - CX) * depth / FX
             y_cam = (py - CY) * depth / FY
             z_cam = depth
-
+            # TF로 지도 좌표 변환
             point = PointStamped()
             point.header.frame_id = 'camera_frame'
             point.header.stamp = rclpy.time.Time().to_msg()

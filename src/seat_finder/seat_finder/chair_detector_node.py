@@ -46,9 +46,8 @@ class ChairDetector(Node):
                 persons.append({'cx': (x1+x2)//2, 'cy': (y1+y2)//2,
                                  'x1': x1, 'y1': y1, 'x2': x2, 'y2': y2})
 
-        # 2. 색상으로 의자 감지 (갈색/베이지 계열)
+        # 2. 색상으로 의자 감지 
         hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-        # 갈색 범위
         lower = np.array([95, 100, 100])
         upper = np.array([115, 255, 255])
         mask = cv2.inRange(hsv, lower, upper)
