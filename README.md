@@ -1,114 +1,39 @@
-# Intelligent Robotics — ROS2 Lecture Materials
+# 🤖 YOLO 기반 객체 인식 및 지능형 빈 자리 탐색 안내 로봇
 
-Lecture materials for Intelligent Robotics — Ewha Womans University
+## 팀 정보
+- **팀명**: sehr
+- **팀원**: 이재린 (2371046)
 
-### Instructor
-- [Daeun Song](https://robotics.ewha.ac.kr/), Department of Artificial Intelligence, Ewha Womans University
+## 프로젝트 설명
+카페나 도서관 같은 실내 환경에서 로봇이 카메라로 빈 의자를 인식하고, 해당 위치를 지도 상에 표시하며, Nav2 자율주행으로 빈 자리까지 이동하는 시스템입니다.
 
-- Contact: songd@ewha.ac.kr
+## 시스템 구성
+3개의 ROS2 노드로 구성:
+- `chair_detector_node`: YOLOv8으로 사람 감지 + HSV 색상 필터로 의자 감지 -> 빈 의자 픽셀 좌표 퍼블리시
+- `coord_transform_node`: Depth Camera + TF로 픽셀 좌표 -> 지도 2D 좌표 변환
+- `seat_navigator_node`: Nav2 NavigateToPose Action으로 빈 의자까지 자율주행
 
-## Lectures
-
-| # | Package | Topic |
-|---|---------|-------|
-| 01 | `basics` | ROS2 Basics — nodes, topics, publisher/subscriber |
-| 02 | `robot_description` | Robot modeling — URDF, joint/link, robot_state_publisher |
-| 03 | `gazebo_simulation` | Gazebo Fortress simulation — differential drive, spawning |
-| 04 | `sensor` | Sensor simulation — 2D LiDAR, RGB/depth camera, ros_gz_bridge |
-| 05 | `slam` | SLAM & Localization — slam_toolbox (mapping), Nav2 AMCL (localization) |
-| 06 | `nav2` | Navigation — Nav2 stack, costmaps, path planning, controller |
-| 07 | `moveit2` | Manipulation — MoveIt2, motion planning, pick and place |
-| 08-1 | `dynamic_actor` | Dynamic actors in Gazebo — trajectory following, collision avoidance |
-| 08-2 | `multi_robot` | Multi-robot navigation — two independent Nav2 stacks in one Gazebo world |
-
-## Extra
-
-| Package | Topic |
-|---------|-------|
-| `mobile_manipulator` | Mobile manipulation — Clearpath Husky + Kinova arm, Nav2 + MoveIt2 |
-
-## Environment
-
-| Item | Version |
-|------|---------|
-| OS | Ubuntu 22.04 LTS (Jammy Jellyfish) |
-| ROS | ROS2 Humble Hawksbill |
-| Python | 3.10 |
-
-## Repository Structure
-
-Each directory under `src/` corresponds to one lecture and is organized as a ROS2 package.
-
-```
-ros2_ws/
-└── src/
-    ├── 01_basics/
-    ├── 02_robot_description/
-    ├── 03_gazebo_simulation/
-    ├── 04_sensor/
-    ├── 05_slam/
-    ├── 06_nav2/
-    ├── 07_moveit2/
-    └── 08_extra/
-        ├── dynamic_actor/
-        <!-- ├── mobile_manipulator/ -->
-        └── multi_robot/
-```
-
-## Setup
-
-### 1. Install ROS2 Humble
-
-Follow the official installation guide:
-https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debs.html
-
-After installation, source the ROS2 setup file:
-
+## 실행 방법
 ```bash
-source /opt/ros/humble/setup.bash
+ros2 launch seat_finder sim_cafe.launch.py
 ```
 
-### 2. Clone this repository
+## AI 사용 여부 및 사용 내용
+- **Claude Code**: 전반적인 코드 구현 보조, 디버깅, ROS2/Nav2 설정 문제 해결에 활용
 
-```bash
-git clone https://github.com/Ewha-AIRLab/intelligent-robotics-ros2 ~/ros2_ws
-cd ~/ros2_ws
-```
+## 참고 자료
+- YOLOv8: https://docs.ultralytics.com/tasks/detect/
+- Nav2: https://docs.nav2.org/
+- ROS2 Humble: https://docs.ros.org/en/humble/
+- Gazebo Fortress: https://gazebosim.org/docs/fortress
+- ROS2 TF2: https://docs.ros.org/en/humble/Tutorials/Intermediate/Tf2/Tf2-Main.html
+- OpenCV HSV: https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html
 
-### 3. Install dependencies
-```bash
-rosdep install --from-paths src --ignore-src -r -y
-```
+## YouTube 링크
+https://www.youtube.com/watch?v=7s0CZ_deACs
 
-
-### 4. Build the workspace
-
-```bash
-cd ~/ros2_ws
-colcon build
-source install/setup.bash
-```
-
-To build a single package:
-
-```bash
-colcon build --packages-select <package_name>
-```
-
-
-## Running Examples
-
-Source the workspace before running any node:
-
-```bash
-source ~/ros2_ws/install/setup.bash
-```
-
-Then run a node with:
-
-```bash
-ros2 run <package_name> <executable_name>
-```
+## GitHub 링크
+https://github.com/greenxlouv/intelligent_robotics_seat_finder
 
 ## License
 
