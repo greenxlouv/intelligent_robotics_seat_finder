@@ -29,6 +29,11 @@ class ChairDetector(Node):
         self.latest_depth = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
 
     def image_callback(self, msg):
+        if not hasattr(self, 'frame_count'):
+            self.frame_count = 0
+        self.frame_count += 1
+        if self.frame_count % 5 != 0:
+            return
         frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
 
         # 1. YOLO로 person 감지

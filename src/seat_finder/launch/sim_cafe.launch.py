@@ -131,6 +131,27 @@ def generate_launch_description():
                                         'behavior_server', 'bt_navigator']}],
             output='screen',
         ),
+        # Chair detector
+        Node(
+            package='seat_finder',
+            executable='chair_detector',
+            name='chair_detector',
+            output='screen',
+        ),
+        # Coord transform
+        Node(
+            package='seat_finder',
+            executable='coord_transform',
+            name='coord_transform',
+            output='screen',
+        ),
+        # Seat navigator
+        Node(
+            package='seat_finder',
+            executable='seat_navigator',
+            name='seat_navigator',
+            output='screen',
+        ),
         # RViz
         Node(
             package='rviz2',

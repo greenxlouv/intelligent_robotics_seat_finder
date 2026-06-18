@@ -1,32 +1,42 @@
 import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
+from sensor_msgs.msg import Image
 from geometry_msgs.msg import PoseArray, Pose
+from cv_bridge import CvBridge
 import json
+import numpy as np
 import tf2_ros
 import tf2_geometry_msgs
 from geometry_msgs.msg import PointStamped
 import rclpy.duration
 import rclpy.parameter
 
-# 카메라 내부 파라미터 (sensor_robot.urdf 기준)
 FX = 554.0
 FY = 554.0
 CX = 320.0
 CY = 240.0
-FIXED_DEPTH = 2.0  # 의자까지 고정 거리 (m)
 
 class CoordTransformNode(Node):
     def __init__(self):
         super().__init__('coord_transform',
                          allow_undeclared_parameters=True,
                          automatically_declare_parameters_from_overrides=True)
-        self.set_parameters([rclpy.parameter.Parameter('use_sim_time', rclpy.parameter.Parameter.Type.BOOL, True)])
+        self.set_parameters([rclpy.parameter.Parameter(
+            'use_sim_time', rclpy.parameter.Parameter.Type.BOOL, True)])
+
+        self.bridge = CvBridge()
+        self.latest_depth = None
+
         self.create_subscription(String, '/detected_chairs', self.chairs_callback, 10)
+        self.create_subscription(Image, '/depth_camera/depth_image', self.depth_callback, 10)
         self.pub = self.create_publisher(PoseArray, '/empty_chairs_map', 10)
         self.tf_buffer = tf2_ros.Buffer()
         self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
         self.get_logger().info('CoordTransformNode started')
+
+    def depth_callback(self, msg):
+        self.latest_depth = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
 
     def chairs_callback(self, msg):
         chairs = json.loads(msg.data)
@@ -40,10 +50,20 @@ class CoordTransformNode(Node):
         for chair in chairs:
             px, py = chair['cx'], chair['cy']
 
-            # 픽셀 → 카메라 좌표 (고정 depth)
-            x_cam = (px - CX) * FIXED_DEPTH / FX
-            y_cam = (py - CY) * FIXED_DEPTH / FY
-            z_cam = FIXED_DEPTH
+            if self.latest_depth is not None:
+                h, w = self.latest_depth.shape[:2]
+                if 0 <= px < w and 0 <= py < h:
+                    depth = float(self.latest_depth[py, px])
+                    if not np.isfinite(depth) or depth <= 0.1 or depth > 10.0:
+                        depth = 2.0
+                else:
+                    depth = 2.0
+            else:
+                depth = 2.0
+
+            x_cam = (px - CX) * depth / FX
+            y_cam = (py - CY) * depth / FY
+            z_cam = depth
 
             point = PointStamped()
             point.header.frame_id = 'camera_frame'
